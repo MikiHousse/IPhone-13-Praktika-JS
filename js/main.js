@@ -1,8 +1,10 @@
 const links = document.querySelectorAll('.header-menu__item a');
+const linkChar = document.querySelector('.card-details__link-characteristics');
 
+const newArray = [...links, linkChar]
 // seamless.polyfill();
 
-links.forEach((element, index, array) => {
+newArray.forEach((element) => {
     element.addEventListener('click', (event) => {
         event.preventDefault();
 
@@ -25,20 +27,20 @@ links.forEach((element, index, array) => {
     })
 });
 
-const xar = document.querySelectorAll('.card-details__link-characteristics');
+// const xar = document.querySelectorAll('.card-details__link-characteristics');
 
-xar.forEach((element) => {
-    element.addEventListener('click', (event) => {
-        event.preventDefault();
+// xar.forEach((element) => {
+//     element.addEventListener('click', (event) => {
+//         event.preventDefault();
 
-        const id = element.getAttribute('href').substring('#characteristics');
-        const section =document.querySelector(id);
+//         const id = element.getAttribute('href').substring('#characteristics');
+//         const section =document.querySelector(id);
 
-        if (section) {
-            section.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    })
-})
+//         if (section) {
+//             section.scrollIntoView({
+//                 behavior: 'smooth',
+//                 block: 'start'
+//             });
+//         }
+//     })
+// })
