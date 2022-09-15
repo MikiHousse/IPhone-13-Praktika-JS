@@ -1,7 +1,8 @@
-const links = document.querySelectorAll('.header-menu__item a');
+const scrollFunc = () => {
+    const links = document.querySelectorAll('.header-menu__item a');
 const linkChar = document.querySelector('.card-details__link-characteristics');
 
-const newArray = [...links, linkChar]
+const newArray = [...links, linkChar];
 // seamless.polyfill();
 
 newArray.forEach((element) => {
@@ -24,7 +25,7 @@ newArray.forEach((element) => {
         //     //     inline: "center",
         //     };
         }
-    })
+    });
 });
 
 // const xar = document.querySelectorAll('.card-details__link-characteristics');
@@ -44,3 +45,6 @@ newArray.forEach((element) => {
 //         }
 //     })
 // })
+};
+
+scrollFunc();
